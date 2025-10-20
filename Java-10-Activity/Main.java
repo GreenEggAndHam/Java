@@ -17,11 +17,11 @@ class Main {
   if GPA is over 90, return GPA weighted by an extra 10%;
   otherwise return the raw GPA.
 */
-double gpa(double dih){
-  if (dih < 90){
-    return (dih*1.10);
+double gpa(double lih){
+  if (lih < 90){
+    return (lih*1.10);
   } else {
-    return dih;
+    return lih;
   }
 }
 
@@ -33,15 +33,15 @@ double gpa(double dih){
   Display to console "Student Graduating" or "Student NOT Graduating" depending on the value returned by the function.
 */
 boolean isGraduating( String gradelvl, int credits){
-  if((gradelvl == "Senior" || gradelvl == "senior") && credits >= 44){
+  if(("Senior".equals(gradelvl)) && credits >= 44){
     return true;
     
   }
-  else 
+  else {
     return false;
 
   }
-  }
+}
 
 
 /* Challenge 3:  BMI
@@ -65,6 +65,8 @@ String bmi(double weight, double inches){
 }
   else if (formula >=40.0){
     return "Obese";}
+  else {return "Well, gee, you stumped me there";}
+  
   
 }
 /* Challenge 4:
@@ -84,7 +86,7 @@ double shippingCost(double weight){
     return 10.00;
   } else if (weight >= 25){
     return 10.00 + weight*0.02;
-  }
+  } else{return 30;}
 }
 
 /* Challenge 5:
@@ -94,7 +96,11 @@ boolean blueOrViolet(int light){
   if (light <=670 && light >=600 || light <=750 && light>=700){
         return true;
 
-  } else {return false;}
+  } else {
+
+    return false;}}
+
 }
+
 
   

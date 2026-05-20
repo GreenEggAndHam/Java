@@ -41,20 +41,17 @@ class Main {
     // Create a route handler to respond to the request (default route)
     server.createContext("/", new RouteHandler("Default route...") );
 
-    // create a route called 'customers' that gets all customer records.
     String sql = "";
-    sql  = " Select * from customers ";
-    server.createContext("/customers", new RouteHandler(db,sql) );
+    sql  = " Select * from members ";
+    server.createContext("/members", new RouteHandler(db,sql) );
 
-    // Create a route called 'employees' that gets all employee records.
-    sql  = " Select * from employees ";
-    server.createContext("/employees", new RouteHandler(db,sql) ) ;
+
+    sql  = " Select * from libros ";
+    server.createContext("/libros", new RouteHandler(db,sql) ) ;
         
-    // Create a route called 'songs' that gets track(song) records. Limit to 200 records.
-    sql  = " Select tracks.name, albums.title, tracks.composer FROM tracks ";
-    sql += " INNER JOIN albums ON albums.albumid=tracks.albumid ";
-    sql  += " LIMIT 200 ";    
-    server.createContext("/songs", new RouteHandler(db,sql) ) ;
+    
+    sql  = " Select * from Borrowed Books"; 
+    server.createContext("/borrowed", new RouteHandler(db,sql) ) ;
 
 
     // Start the server      
@@ -62,3 +59,5 @@ class Main {
     System.out.println("Server is listening on port " + port);      
   }    
 }
+
+

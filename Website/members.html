@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>54-Actvy Soln: Home</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="members.js"></script>
+         <link href="components.css"/>
+    <script src="components.js"></script>
+  </head>
+  
+  <!-- Call the int function when website loads -->
+  <body>
+    <div>
+      <!--  Header or Banner -->
+      <div id="header">
+        <h1> Lesson 54 ACTIVITY</h1>
+      </div>
+
+      <!--  nav bar -->
+      <nav id='nav'>
+        <h2>Navigation - Members Page</h2>
+
+        <a href="index.html" class="button">Home</a>   
+        <a href="books.html" class="button">Books</a> 
+        <a href="borrowed.html" class="button">Borrowed Books</a>
+        <a href="members.html" class="button">Members</a>
+      </nav>
+      
+      <!--  Main content (has 3 panels) -->
+      <div class="container">
+        
+        <div class='panel'>
+                   Left Panel
+                   <h4> Search for Member by First name</h4>
+              <input style="flex:2;text-align:right;" type="text" 
+                id="firstname" placeholder="Enter member's first name" >        
+              <a class="button" onclick="filter()"> Search </a><br>
+              <h4 id="count"></h4>
+        </div>
+        
+        <div id='centerpanel'>
+          Center Panel
+          <h3>
+            This webpage will show you all the members!
+          </h3>
+        </div>
+        
+        <div class='panel'>
+          Right Panel
+        </div>
+        
+      </div>
+
+      <!--  Footer -->
+      <div id='foot'>
+        <h3> Footer </h3>
+      </div>
+
+    </div>
+    
+  </body>
+</html>
